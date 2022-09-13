@@ -1,6 +1,3 @@
-const { fetch, setGlobalDispatcher, Agent } = require('undici')
-
-setGlobalDispatcher(new Agent({ connect: { timeout: 30_000 } }) )
 const { token } = require('./config.json');
 
 console.log(token);
