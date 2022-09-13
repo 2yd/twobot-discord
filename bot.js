@@ -1,9 +1,5 @@
 require('dotenv').config()
 
-const app = require("./webserver");
-const port = 8080;
-app.listen(process.env.PORT || port);
-
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
