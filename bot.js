@@ -7,18 +7,13 @@ client.once('ready', () => {
     console.log('twobot is ready')
 })
 
-client.on('message',msg => {
-    if (msg.content == 'ping') {
-        msg.reply('pong!')
-    }
-})
-
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
 	const { commandName } = interaction;
 
 	if (commandName === 'ping') {
+		console.log('received!')
 		await interaction.reply('Pong!');
 	} else if (commandName === 'server') {
 		await interaction.reply('Server info.');
