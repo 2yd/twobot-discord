@@ -6,5 +6,5 @@ module.exports = {
         .setDescription('一号测试命令'),
     async execute(interaction) {
         await interaction.reply('ok_1')
-    },
+    }
 }
