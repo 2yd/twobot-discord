@@ -36,8 +36,9 @@ client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
 	if (interaction.isButton()) {
+		console.log(interaction)
+
 		if(interaction.customID == "primary_1") {
-			console.log(interaction)
 
 			interaction.reply("点我干嘛，有病")
 		}
