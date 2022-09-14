@@ -35,15 +35,19 @@ for (const file of eventFiles) {
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
-	const command = interaction.client.commands.get(interaction.commandName);
+	if (interaction.isButton()) {
+		interaction.reply("点我干嘛，有病")
+	} else {		
+		const command = interaction.client.commands.get(interaction.commandName);
 
-	if (!command) return
-	try {
-		await command.execute(interaction)
-	} catch (error) {
-		console.error(error)
-		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-	}
+		if (!command) return
+		try {
+			await command.execute(interaction)
+		} catch (error) {
+			console.error(error)
+			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		}
+    }
 });
 
 client.login(process.env.BOT_TOKEN)
