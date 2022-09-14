@@ -14,7 +14,7 @@ module.exports = {
 			);
 		await interaction.reply({ content: '快点我', components: [row] });
 
-		const collector = interaction.channel.createMessageComponentCollect({ componentType: ComponentType.Button,time:15000})
+		const collector = interaction.channel.createMessageCollector({ componentType: ComponentType.Button,time:15000})
 
 		collector.on('collect', i => {
 			if (i.user.id === interaction.user.id) {
