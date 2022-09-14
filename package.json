@@ -4,7 +4,7 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js & node deploy-command.js",
+    "start": "node deploy-command.js & node bot.js",
     "devStart": "nodemon bot.js"
   },
   "keywords": [],
