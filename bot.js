@@ -20,7 +20,7 @@ client.on('interactionCreate', async interaction => {
 	const { commandName } = interaction;
 
 	if (commandName === '2b') {
-		await interaction.reply('2b在的哟');
+		await interaction.reply('我测你们码');
 	}
 });
 
