@@ -37,6 +37,8 @@ client.on('interactionCreate', async interaction => {
 
 	if (interaction.isButton()) {
 		if(!interaction.customID == "primary_1") {
+			console.log(interaction)
+
 			interaction.reply("点我干嘛，有病")
 		}
 	} else {		
