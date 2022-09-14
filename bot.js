@@ -19,13 +19,8 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
-	if (commandName === 'ping') {
-		console.log('received!')
-		await interaction.reply('Pong!');
-	} else if (commandName === 'server') {
-		await interaction.reply('Server info.');
-	} else if (commandName === 'user') {
-		await interaction.reply('User info.');
+	if (commandName === '2b') {
+		await interaction.reply('2b在的哟');
 	}
 });
 

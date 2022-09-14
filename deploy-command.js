@@ -4,9 +4,7 @@ require('dotenv').config()
 
 
 const commands = [
-	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
-	new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
-	new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
+	new SlashCommandBuilder().setName('2b').setDescription('呼唤2b'),
 ]
 	.map(command => command.toJSON());
 
