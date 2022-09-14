@@ -32,10 +32,6 @@ for (const file of eventFiles) {
 	}
 }
 
-client.once('ready', () => {
-    console.log('twobot is ready')
-})
-
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
