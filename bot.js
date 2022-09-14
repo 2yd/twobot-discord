@@ -8,7 +8,7 @@ client.once('ready', () => {
 })
 
 client.on('messageCreate',async (msg) => {
-	if (msg.content == 'fuck') {
+	if (msg.content) {
 		console.log(msg)
 	}
 })
