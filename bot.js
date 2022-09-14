@@ -34,13 +34,14 @@ for (const file of eventFiles) {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
+	console.log(interaction)
 
 	if (interaction.isButton()) {
 		console.log(interaction)
 
 		if(interaction.customID == "primary_1") {
 
-			interaction.reply("点我干嘛，有病")
+			await interaction.reply("点我干嘛，有病")
 		}
 	} else {		
 		const command = interaction.client.commands.get(interaction.commandName);
