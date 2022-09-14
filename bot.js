@@ -29,3 +29,6 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(process.env.BOT_TOKEN)
+console.log(process.env.BOT_TOKEN)
+console.log(process.env.GUILD_ID)
+console.log(process.env.CLIENT_ID)
