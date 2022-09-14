@@ -1,10 +1,16 @@
 require('dotenv').config()
 
 const { Client, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds,GatewayIntentBits.MessageContent] });
 
 client.once('ready', () => {
     console.log('twobot is ready')
+})
+
+client.on('messageCreate',async (msg) => {
+	if (msg.content == 'fuck') {
+		console.log(msg)
+	}
 })
 
 client.on('interactionCreate', async interaction => {
